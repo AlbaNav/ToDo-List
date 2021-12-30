@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+* {
+  font-family: "Courgette", cursive;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #d7d5d5;
+  color: #d8d6d6;
+}
+
+h1 {
+  text-align: center;
+  color: #2e2424;
+}
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #6faea8;
+  padding: 30px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  padding: 15px 10px;
+  outline: none;
+  width: 300px;
+}
+
+.li-container {
+  background-color: #d7d5d5;
+  width: 100%;
+  color: #461512;
+  margin-top: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background-color: #d7d5d5;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: flex;
+}
+
+li p {
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+}
+
+.btn-delete {
+  margin-left: auto;
+  border: none;
+  background-color: #a8533e;
+  color: #d7d5d5;
+  font-weight: bold;
+  padding: 5px 10px;
+  outline: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 10%;
+  font-size: 1.2em;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  background-color: #572522;
+}
+
+.btn-add {
+  padding: 5px 15px;
+  border: none;
+  color: #2e2424;
+  font-family: fantasy;
+  background-color: #a4cac8;
+  font-size: 1.4rem;
+  outline: none;
+}
+
+.btn-add:hover {
+  cursor: pointer;
+  background-color: #ffc09e;
+}
+
+.empty {
+  color: #ffc09e;
+}
+
+#calendario {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px double #e2ab8e;
+  max-width: 536px;
+  background-color: #a4cac8;
+  text-align: center;
+}
+
+#diasc {
+  border: 1px solid #e2ab8e;
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+#diasc th,
+#diasc td {
+  font: normal 14pt arial;
+  width: 70px;
+  height: 30px;
+}
+#diasc th {
+  color: #2e2424;
+  background-color: #79aca9;
+}
+#diasc td {
+  color: #2e2424;
+  background-color: #6faea8;
+}
+#fechaactual {
+  font: bold 12pt arial;
+  padding: 0.4em;
+  color: #2e2424;
+}
+#fechaactual i {
+  cursor: pointer;
+}
+#fechaactual i:hover {
+  color: #e98167;
+  text-decoration: underline;
+}
+#buscafecha {
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: #237271;
+  color: #f27761;
+  padding: 5px;
+}
+#buscafecha select,
+#buscafecha input {
+  background-color: #2e2424;
+  color: #79aca9;
+  font: bold 10pt arial;
+}
+#buscafecha [type="text"] {
+  text-align: center;
+}
+#buscafecha [type="button"] {
+  cursor: pointer;
+}
+
+#anterior {
+  float: left;
+  width: 100px;
+  font: bold 12pt arial;
+  padding: 0.5em 0.1em;
+  cursor: pointer;
+  color: #886451;
+}
+#posterior {
+  float: right;
+  width: 100px;
+  font: bold 12pt arial;
+  padding: 0.5em 0.1em;
+  cursor: pointer;
+  color: #886451;
+}
+#anterior:hover {
+  color: #2e2424;
+  text-decoration: underline;
+}
+#posterior:hover {
+  color: #2e2424;
+  text-decoration: underline;
+}
+#titulos {
+  font-family: "Courgette", cursive;
+  padding: 0.2em;
+  color: #ee9a6f;
+}
