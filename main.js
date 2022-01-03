@@ -3,8 +3,12 @@ const todoInput = document.querySelector("input");
 const todoButton = document.querySelector(".btn-add");
 const ul = document.querySelector("ul");
 const empty = document.querySelector(".empty");
-const searchTask =document.querySelector('.Search task')
-const searchTBtn =document.querySelector('.btnTask')
+const empty2=document.querySelector(".empty2")
+const find$$=document.querySelector('.search');
+const findBtn$$=document.querySelector('.searchTask');
+const ulSearch = document.querySelectorAll(".segundo");
+const searchinput=document.querySelector('.buscatask');
+
 
 todoButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -24,6 +28,31 @@ todoButton.addEventListener("click", (e) => {
     empty.style.display = "none";
   }
 });
+findBtn$$.addEventListener("click", (e) => {
+    e.preventDefault();
+  
+    const text2 = searchinput.value;
+  
+    if (text2 !== "") {
+      const li2 = document.createElement("li");
+      const p2 = document.createElement("p");
+      p2.textContent = text2;
+  
+      li2.appendChild(p2);
+      l2.appendChild(addDeleteBtn());
+      ulSearch.appendChild(li2);
+  
+      searchinput.value = "";
+      empty2.style.display = "none";
+    }
+  });
+  
+  for (const input of todoInput.value) {
+     if (searchinput.value.toLowerCase().includes(input.value.toLowerCase())) {
+         print(searchinput);   
+         searchinput.appendChild(find$$);        
+ }}
+ findBtn$$.addEventListener("click", searchinput);
 
 
 function addDeleteBtn() {
@@ -44,6 +73,7 @@ function addDeleteBtn() {
   return deleteBtn;
 }
 
+
 meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre",
   "noviembre","diciembre",];
 lasemana = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado",];
@@ -59,14 +89,7 @@ window.onload = function () {
   pos = document.getElementById("posterior");
   f0 = document.getElementById("fila0");
   pie = document.getElementById("fechaactual");
-  pie.innerHTML +=
-    lasemana[diasemhoy] +
-    ", " +
-    diahoy +
-    " de " +
-    meses[meshoy] +
-    " de " +
-    annohoy;
+  pie.innerHTML += lasemana[diasemhoy] +", " +diahoy +" de " + meses[meshoy] +" de " + annohoy;
   document.buscar.buscaanno.value = annohoy;
   mescal = meshoy;
   annocal = annohoy;
@@ -191,5 +214,4 @@ function mifecha() {
     escribirdias();
   }
 }
-
 
