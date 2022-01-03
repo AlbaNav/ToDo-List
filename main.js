@@ -3,11 +3,10 @@ const todoInput = document.querySelector("input");
 const todoButton = document.querySelector(".btn-add");
 const ul = document.querySelector("ul");
 const empty = document.querySelector(".empty");
-const empty2=document.querySelector(".empty2")
-const find$$=document.querySelector('.search');
-const findBtn$$=document.querySelector('.searchTask');
-const ulSearch = document.querySelectorAll(".segundo");
 const searchinput=document.querySelector('.buscatask');
+const searchBtn$$=document.querySelector('.searchTask');
+const coincidence=document.querySelectorAll('#ul');
+const tareas=[...document.querySelectorAll(".ul")];
 
 
 todoButton.addEventListener("click", (e) => {
@@ -28,34 +27,33 @@ todoButton.addEventListener("click", (e) => {
     empty.style.display = "none";
   }
 });
-findBtn$$.addEventListener("click", (e) => {
+
+searchBtn$$.addEventListener("click", (e) => {
     e.preventDefault();
   
     const text2 = searchinput.value;
   
     if (text2 !== "") {
-      const li2 = document.createElement("li");
       const p2 = document.createElement("p");
       p2.textContent = text2;
   
-      li2.appendChild(p2);
-      l2.appendChild(addDeleteBtn());
-      ulSearch.appendChild(li2);
-  
+      p2.appendChild(addDeleteBtn());
+      coincidence.appendChild(p2);
+      find$$.appendChild(coincidence);
+    
       searchinput.value = "";
-      empty2.style.display = "none";
+      empty.style.display = "none";
     }
-  });
-  
-  for (const input of todoInput.value) {
-     if (searchinput.value.toLowerCase().includes(input.value.toLowerCase())) {
-         print(searchinput);   
-         searchinput.appendChild(find$$);        
- }}
- findBtn$$.addEventListener("click", searchinput);
+});
+      for (const tarea of tareas) {
+        if (text2.value.toLowerCase().includes(tarea.value.toLowerCase())) {
+            print(text2);   
+            text2.appendChild(find$$);
+        }
+    }
 
 
-function addDeleteBtn() {
+ function addDeleteBtn() {
   const deleteBtn = document.createElement("button");
 
   deleteBtn.textContent = "X";
@@ -72,6 +70,8 @@ function addDeleteBtn() {
   });
   return deleteBtn;
 }
+
+
 
 
 meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre",
@@ -119,10 +119,9 @@ function primeralinea() {
   }
 }
 function escribirdias() {
-  primeromes = new Date(annocal, mescal, "1");
+  primeromes = new Date(annocal, mescal, "0");
   prsem = primeromes.getDay();
-  prsem--;
-  if (prsem == -1) {
+  if (prsem == 1) {
     prsem = 6;
   }
   diaprmes = primeromes.getDate();
@@ -214,4 +213,3 @@ function mifecha() {
     escribirdias();
   }
 }
-
