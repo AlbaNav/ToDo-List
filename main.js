@@ -28,31 +28,6 @@ todoButton.addEventListener("click", (e) => {
   }
 });
 
-searchBtn$$.addEventListener("click", (e) => {
-    e.preventDefault();
-  
-    const text2 = searchinput.value;
-  
-    if (text2 !== "") {
-      const p2 = document.createElement("p");
-      p2.textContent = text2;
-  
-      p2.appendChild(addDeleteBtn());
-      coincidence.appendChild(p2);
-      find$$.appendChild(coincidence);
-    
-      searchinput.value = "";
-      empty.style.display = "none";
-    }
-});
-      for (const tarea of tareas) {
-        if (text2.value.toLowerCase().includes(tarea.value.toLowerCase())) {
-            print(text2);   
-            text2.appendChild(find$$);
-        }
-    }
-
-
  function addDeleteBtn() {
   const deleteBtn = document.createElement("button");
 
