@@ -2,7 +2,6 @@
 
 * {
   font-family: "Courgette", cursive;
-  
 }
 body {
   margin: 0;
@@ -21,15 +20,18 @@ h1 {
 }
 
 .container {
-  margin-top: 30px;
+  margin-top: 2%;
   margin-bottom: 30px;
-  width: 100%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #6faea8;
-  background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+  background: rgba(111, 174, 168, 0.48);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(111, 174, 168, 0.51);
   padding: 30px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 form {
@@ -37,20 +39,18 @@ form {
   width: 60%;
 }
 
-
 input {
   padding: 15px 10px;
   outline: none;
   width: 70%;
 }
 
-
 .li-container {
-  background-color: #d7d5d5;
-  border-radius: 20%;
+  background-color: transparent;
+
   width: 100%;
   color: #461512;
-  margin-top: 20px;
+  margin-top: 1%;
 }
 
 ul {
@@ -60,15 +60,14 @@ ul {
 li {
   list-style: none;
   background-color: #d7d5d5;
-  border-radius: 10px;
-  margin-top: 15px;
+
+  margin-top: 0.3%;
   display: flex;
-  
 }
 
 li p {
   margin: 0;
-  padding: 15px;
+  padding: 2%;
   width: 80%;
 }
 
@@ -80,10 +79,10 @@ li p {
   font-weight: bold;
   padding: 5px 10px;
   outline: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  width: 20%;
-  font-size: 1.2em;
+  border-top-right-radius: 6%;
+  border-bottom-right-radius: 6%;
+  width: 12%;
+  font-size: 1.1em;
 }
 
 .btn-delete:hover {
@@ -95,13 +94,11 @@ li p {
   padding: 5px 15px;
   border: none;
   color: #2e2424;
-  font-family: fantasy;
+  font-family: "Courgette", cursive;
   background-color: #a4cac8;
-  font-size: 10%;
+  font-size: 80%;
   outline: none;
 }
-
-
 
 .btn-add:hover {
   cursor: pointer;
@@ -113,32 +110,37 @@ li p {
 }
 
 #calendario {
+  justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   border: 4px double #e2ab8e;
-  max-width: 60%;
+  max-width: 100%;
   background-color: #a4cac8;
   text-align: center;
 }
 
 #diasc {
+  justify-content: center;
   border: 1px solid #e2ab8e;
   border-collapse: separate;
   border-spacing: 1%;
 }
 #diasc th,
 #diasc td {
+  justify-content: center;
   font-family: "Courgette", cursive;
-  width: 5%;
-  height: 5%;
+  width: 6%;
+  height: 8%;
 }
 #diasc th {
+  justify-content: center;
   color: #2e2424;
   background-color: #79aca9;
 }
 #diasc td {
+  justify-content: center;
   color: #2e2424;
   background-color: #6faea8;
 }
@@ -155,20 +157,21 @@ li p {
   text-decoration: underline;
 }
 #buscafecha {
-  border: solid #FEC2A3;
+  border: solid #fec2a3;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   background-color: #237271;
   background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
-  color: #E98167;
+  color: #e98167;
   padding: 5px;
 }
 #buscafecha select,
 #buscafecha input {
   display: flex;
   flex-direction: column;
-    background-color: #2e2424;
+  justify-content: center;
+  background-color: #2e2424;
   color: #79aca9;
   font-family: "Courgette", cursive;
 }
